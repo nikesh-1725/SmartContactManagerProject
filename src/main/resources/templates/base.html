@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="Layout(content)">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	 <!--<meta http-equiv="refresh" content="1">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+	<title th:text="${title}">Base Html</title>
+</head>
+
+<body class="p-0 border-0 bd-example m-0 border-0">
+	<!--Nav Bar Started-->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#"><h5>Smart Contact Manager</h5></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto mb-2 mb-lg-0 text-uppercase">
+					<li class="nav-item active">
+						<a class="nav-link"  th:href="@{/}" >Home  <span class="sr-only">(current)</span></a>
+						
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+					<!-- Dropdown which came with default
+						<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Dropdown
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+						</ul>
+					</li>-->
+					<li class="nav-item">
+						<a class="nav-link" href="#" tabindex=-"-1" aria-disabled="true">Login</a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" th:href="@{/signUp}" tabindex=-"-1" aria-disabled="true">SignUp</a>
+					</li>
+				</ul>
+				<!-- Serach Button
+					<form class="d-flex" role="search">
+					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success" type="submit">Search</button>
+				</form>-->
+			</div>
+		</div>
+	</nav>
+	<!--Nav Bar End-->
+	
+
+
+	<div th:replace="${content}"></div>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shCk5W8+5gHHubmOMwBh/wwI1elgBnytBq5Tt"
+		crossorigin="anonymous"></script>
+		-->
+<!--		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+gbg4bPZUnnKL9+4W2b4M2g2L/GD1B1fFQnf1F3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-wq7bWLx3vJg2Ksc6r4LyzqvGZlTxPmOTKBga9ToSm1OskFZz5JzZsRLvtxJC5z7F" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha384-cdFJcfB/Gsr0TCtm7Z8W2Xw0/JSVWElt/yoSrbV6k/qnqIBjIvz3G2SrP7UVTQf7" crossorigin="anonymous"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+gbg4bPZUnnKL9+4W2b4M2g2L/GD1B1fFQnf1F3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-wq7bWLx3vJg2Ksc6r4LyzqvGZlTxPmOTKBga9ToSm1OskFZz5JzZsRLvtxJC5z7F" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha384-cdFJcfB/Gsr0TCtm7Z8W2Xw0/JSVWElt/yoSrbV6k/qnqIBjIvz3G2SrP7UVTQf7" crossorigin="anonymous"></script>
+<script>
+    // Initialize Bootstrap components
+    var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
+    var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+        return new bootstrap.Dropdown(dropdownToggleEl);
+    });
+</script>-->
+
+<script th:src="@{/js/script.js}"></script>
+
+</body>
+
+</html>
